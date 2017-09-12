@@ -11,10 +11,12 @@ Source0: https://rubygems.org/gems/%{gem_name}-%{version}.gem
 BuildRequires: ruby(release)
 BuildRequires: rubygems-devel
 BuildRequires: ruby
-# BuildRequires: rubygem(bacon) >= 1.1.0
-# BuildRequires: rubygem(bacon) < 1.2
+BuildRequires: rubygem(bundler)
+BuildRequires: rubygem(rake)
+BuildRequires: rubygem(test-unit)
+BuildRequires: rubygem(rdoc)
+BuildRequires: rubygem(bacon) 
 Requires: fluentd
-Requires: bacon
 BuildArch: noarch
 
 %if 0%{?rhel} > 0

@@ -22,6 +22,11 @@ BuildRequires: <%= requirement "ruby#{'-devel' unless spec.extensions.empty?}", 
 # https://fedoraproject.org/wiki/Packaging:C_and_C++#BuildRequires_and_Requires
 BuildRequires: gcc
 <% end -%>
+BuildRequires: rubygem(bundler)
+BuildRequires: rubygem(rake)
+BuildRequires: rubygem(test-unit)
+BuildRequires: rubygem(rdoc)
+BuildRequires: rubygem(bacon)
 <%= development_dependencies.reject do |d|
   ["rdoc", "rake", "bundler"].include? d.name
 end.virtualize.with_requires.comment_out.to_rpm -%>
