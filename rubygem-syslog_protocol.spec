@@ -15,8 +15,11 @@ BuildRequires: rubygem(bundler)
 BuildRequires: rubygem(rake)
 BuildRequires: rubygem(test-unit)
 BuildRequires: rubygem(rdoc)
-BuildRequires: rubygem(bacon) 
-Requires: fluentd
+BuildRequires: rubygem(bacon)
+# BuildRequires: rubygem(bacon) >= 1.1.0
+# BuildRequires: rubygem(bacon) < 1.2
+#Requires: fluentd
+Requires: bacon
 BuildArch: noarch
 
 %if 0%{?rhel} > 0
@@ -78,5 +81,5 @@ popd
 %{gem_instdir}/test
 
 %changelog
-* Tue Sep 12 2017 stran <steveqtran@gmail.com> - 0.9.2-1
+* Wed Sep 13 2017 stran <steveqtran@gmail.com> - 0.9.2-1
 - Initial package

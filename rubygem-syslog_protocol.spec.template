@@ -31,7 +31,7 @@ BuildRequires: rubygem(bacon)
   ["rdoc", "rake", "bundler"].include? d.name
 end.virtualize.with_requires.comment_out.to_rpm -%>
 <% if spec.extensions.empty? -%>
-Requires: fluentd
+#Requires: fluentd
 Requires: bacon
 BuildArch: noarch
 <% end -%>
